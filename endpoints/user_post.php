@@ -10,7 +10,7 @@
       return rest_ensure_response($response);
     }
 
-    if( username_exists($username) || username_exists($username)){
+    if( username_exists($username) || email_exists($email)){
       $response = new WP_Error('Erro', 'Email ou usuário já cadastrado', ['status'  => 403]);
       return rest_ensure_response($response);
     }
