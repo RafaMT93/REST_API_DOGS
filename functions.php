@@ -1,9 +1,10 @@
 <?php 
   //Clean Actions
   remove_action('rest_api_init', 'create_initial_rest_routes', 99);
-
+  //requires
   $dirbase = get_template_directory();
   require_once $dirbase . '/endpoints/user_post.php';
+  require_once $dirbase . '/endpoints/user_get.php';
   //Change url wp-json
   function change_api(){
     return 'json';
